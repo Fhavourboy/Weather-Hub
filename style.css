@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #city-search {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    width: 300px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #search-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  #search-button:hover {
+    background-color: #45a049;
+  }
+  
+  .weather-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .weather-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  #weather-condition {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .weather-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .detail {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .label {
+    display: block;
+    color: #888;
+    margin-bottom: 5px;
+  }
+  
+  .forecast {
+    margin-top: 30px;
+  }
+  
+  h3 {
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .forecast-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+  }
+  
+  .forecast-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .forecast-date {
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .forecast-temp {
+    margin: 10px 0;
+  }
+  
+  .forecast-temp .max {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .forecast-temp .min {
+    color: #888;
+    margin-left: 10px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .weather-details {
+      flex-direction: column;
+    }
+    
+    .forecast-container {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    #city-search {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .search-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    #city-search, #search-button {
+      width: 100%;
+      max-width: 300px;
+    }
+    
+    .temperature {
+      font-size: 2.5rem;
+    }
+  }
+  
